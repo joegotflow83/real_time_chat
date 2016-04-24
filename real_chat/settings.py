@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Local Apps
+    'accounts',
+    'main',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'real_chat.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Login URL
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/chat/'
