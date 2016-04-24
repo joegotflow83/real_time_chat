@@ -1,1 +1,1 @@
-channel_rounting = {}
+channel_routing = {}
