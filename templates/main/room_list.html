@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Chat Rooms{% endblock %}
+
+{% block content %}
+<h3>Create a room or join a room</h3>
+{% for room in object_list %}
+  {{ room }}
+{% endfor %}
+{% endblock %}
