@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}ChatRoom{% endblock title %}
+
+{% block content %}
+<h3>{{ room }}</h3>
+{% for message in messages %}
+  {{ message.message }}
+{% endfor %}
+<label>Your Message</label>
+<input type="text" placeholder="message">
+<button type="submit" class="waves-effect waves-light btn">Message</button>
+<script type="text/javascript" src="{% static 'chat.js' %}"></script>
+<script type="text/javascript" src="{% static 'reconnecting-websocket.min.js' %}"></script>
+{% endblock %}

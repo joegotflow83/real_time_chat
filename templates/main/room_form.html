@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Room{% endblock title %}
+
+{% block content %}
+<h3>Create Room</h3>
+<form method="post" action="{% url 'create_room' %}">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Create Room" class="waves-effect waves-light btn">
+</form>
+{% endblock %}
